@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./res/icons/online-store-icon.png">
+    <title>Welcome Page - Online Shop</title>
+</head>
+
+<body>
+    <div id="welcome-page-background"></div>
+    <div id="header-container">
+        <div id="header-upper-details">
+            <div id="login-signup">
+                <a href="">Signup </a>|<a href=""> Login</a>
+            </div>
+        </div>
+        <div id="header-lower-details">
+            <h2>Online Store</h2>
+            <div id="search-bar">
+                <input id="search-bar" type="text" placeholder="Search Product..." />
+                <div id="search-btn">
+                    <img src="./res/icons/search-icon.png" alt="">
+                </div>
+            </div>
+            <!--
+                
+            <div id="cart-btn">
+                <img src="./res/icons/shopping-cart-icon.png">
+                <span id="cart-num">0</span>
+            </div>
+            -->
+            <div id="profile-area">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="home-body-container">
+        <form id="login-form" action="">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">LOGIN</button>
+            <span id="loading-text">Loading...</span>
+        </form>
+    </div>
+    <div id="unecessary-footer">
+        <h4><a href="google.com">About Online Store</a></h4>
+    </div>
+
+    <script>
+        const loginForm = document.querySelector('#login-form');
+        const loadingText = document.querySelector('#loading-text');
+        loginForm.addEventListener('submit', e => {
+            e.preventDefault()
+            loadingText.style.display = 'flex'
+            setTimeout(() => {
+                window.open('./customerPage.html', "_self")
+            }, 2000);
+        })
+
+    </script>
+</body>
+
+</html>
